@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+/* font-family: 'Fjalla One', sans-serif; */
+/* font-family: 'Nunito Sans', sans-serif; */
+* {
+    box-sizing: border-box;
+  }
+body {
+    background-image: url("../src/img/homebg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.coloumn_left {
+    width: 100%;
+    background-color: #008f4ac7;
+    margin: 0%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content_container_left {
+    display: block;
+    margin: 0%;
+    padding: 40px;
+} 
+.content_container_left h1 {
+    color: white;
+    font-size: 100px;
+    font-family: 'Fjalla One', sans-serif;
+    margin: 0;
+    padding: 0 0 10px 0;
+    text-shadow: 8px 5px #00000070;
+}
+
+.content_container_left p {
+    color: rgba(255, 255, 255, 0.575);
+    font-size: 18px;
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+@media screen and (min-width: 1200px) {
+    .container {
+        display:flex;
+        flex-direction:row;
+    }
+    .coloumn_left {
+        display: flex;
+        width: 40%;
+        background-color: #008f4ac7;
+        margin: 0%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .content_container_left h1 {
+        font-size: 85px;
+    }
+    .coloumn_right {
+        width: 60%;
+        background-color: white;
+    }
+}
+
+
+
+
+/* /1 */
+/* -------------------------- Sliders CSS ------------------------*/
+/* 2 */
+.slider{
+	position: relative;
+	width: 100%;
+	background: #ffffff; 
+    height: 100%;
+}
+.myslide{
+	height: 100%;
+	display: none;
+	overflow: hidden;
+}
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 30px;
+	padding: 15px;
+	cursor: pointer;
+	color: rgb(255, 255, 255);
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: #008F49
+    ; 
+}
+.next{
+	right: 0;
+}
+.dotsbox{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.253);
+}
+.dot{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 3px solid rgb(255, 255, 255);
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+/* /2 */
+
+/* javascript */
+.active, .dot:hover{
+	border-color: #008F49;
+}
+/* /javascript */
+
+/* muslide add fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+/* /muslide add fade */
+
+/* 3 */
+.txt{
+	position: absolute;
+	color: #fff;
+	letter-spacing: 2px;
+	line-height: 35px;
+	top: 40%;
+	left: 15%;
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+}
+
+@-webkit-keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+
+@keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+.txt h2{
+	color: #008F49;
+	font-size: 40px;
+	margin-bottom: 20px;
+    font-family: 'Fjalla One', sans-serif; 
+}
+.txt p{
+	font-weight: bold;
+	font-size: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+/* /3 */
+
+/* 4 */
+img{
+	transform: scale(1.1, 1.2);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 40s;
+  	animation-name: zoomin;
+  	animation-duration: 20s;
+}
+@-webkit-keyframes zoomin {
+    from {transform: scale(1, 1);}
+    to {transform: scale(1.1, 1.1);}
+  }
+  @keyframes zoomin {
+    from {transform: scale(1, 1);}
+    to {transform: scale(1.2, 1.2);}
+  }
+/* /4 */
+h4 {
+    font-size: 100px;
+    height: auto;
+}
+
+/*--------------Navbar---------*/
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(226, 226, 226);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.login {
+    margin: .5rem;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 50px;
+    padding: 5px 20px 5px 20px;
+    margin-left: 40px;
+}
+.login a {
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: rgb(226, 226, 226);
+}
+.login:hover{
+    background-color: #555;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/* 5 */
+@media screen and (min-width: 800px){
+    
+    /* -------------------------- Sliders CSS ------------------------*/
+	.myslide{
+		height: 100%;
+	}
+	.txt {
+		letter-spacing: 2px;
+		line-height: 25px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-animation-name: posi2;
+		-webkit-animation-duration: 2s;
+		animation-name: posi2;
+		animation-duration: 2s;
+	}
+
+	@-webkit-keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	@keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	.txt h1{
+		font-size: 40px;
+	}
+	.txt p {
+		font-size: 13px;
+	}
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+}
+
+
